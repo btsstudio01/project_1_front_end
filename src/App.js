@@ -1,9 +1,11 @@
-import Home from "./Screens/Home";
+import LoginForm from "../src/Screens/Login/index";
 
 function App() {
-  return (<div>
-    <Home />
-  </div>);
+  return (
+    <div>
+      <LoginForm />
+    </div>
+  );
 }
 
 export default App;
