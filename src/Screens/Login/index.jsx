@@ -3,16 +3,20 @@ import "./index.css"
 // import backgroundImage from '../../Assets/login/background/image(1).png';
 import icon from "../../Assets/login/background/Group 1.svg"
 import { Button, Checkbox, Form, Input } from 'antd';
-const onFinish = (values) => {
-  console.log('Success:', values);
-};
-const onFinishFailed = (errorInfo) => {
-  console.log('Failed:', errorInfo);
-};
+import { redirect, useNavigate } from 'react-router-dom';
+
 const App = () => {
+  const navigate = useNavigate();
+
   const onFinish = (values) => {
     console.log('Received values of form: ', values);
+    navigate("/Home");
   };
+
+  const onFinishFailed = (errorInfo) => {
+    console.log('Failed:', errorInfo);
+  };
+
   return (
     <div className="backg flex items-center justify-center flex-col">
       <div className='flex items-center justify-center mb-4 gap-4'>
@@ -81,7 +85,7 @@ const App = () => {
           //   span: 16,
           // }}
           >
-            <Button type="primary" htmlType="submit" className=' bg-[#6366f1] w-full '>
+            <Button type="primary" htmlType="submit" className=' bg-[#6366f1] w-full ' >
               Login
             </Button>
           </Form.Item>

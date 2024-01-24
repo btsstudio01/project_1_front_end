@@ -20,7 +20,7 @@ import ErrorPage from "./Screens/ErrorPage";
 
 const router = createBrowserRouter([
   {
-    path: "/Login",
+    path: "/login",
     element: <Login />,
   },
   {
@@ -29,39 +29,39 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/Home",
+        path: "/home",
         element: <Home />,
       },
       {
-        path: "/Calendar",
+        path: "/calendar",
         element: <Calendar />,
       },
       {
-        path: "/Files",
+        path: "/files",
         element: <Files />,
       },
       {
-        path: "/Finance",
+        path: "/finance",
         element: <Finance />,
       },
       {
-        path: "/Members",
+        path: "/members",
         element: <Members />,
       },
       {
-        path: "/MessageCenter",
+        path: "/messageCenter",
         element: <MessageCenter />,
       },
       {
-        path: "/Settings",
+        path: "/settings",
         element: <Settings />,
       },
       {
-        path: "/Space",
+        path: "/space",
         element: <Space />,
       },
       {
-        path: "/Ticket",
+        path: "/ticket",
         element: <Ticket />,
       }
     ]
