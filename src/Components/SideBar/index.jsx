@@ -11,6 +11,8 @@ import {
   Address,
   SelectorIcon,
 } from "../../Uicomponents/SideBarStyles";
+import {ReactComponent as LifeBuoy} from '../../Assets/SiderBar/Menu/GreyIcons/lifebuoy.svg';
+import {ReactComponent as Arrow} from '../../Assets/SiderBar/Menu/GreyIcons/arrow.svg';
 
 import { useNavigate } from "react-router-dom";
 
@@ -151,7 +153,7 @@ const SideBar = () => {
   };
 
   return (
-    <div className=" h-screen   bg-SideBar flex flex-col items-center cursor-pointer ">
+    <div className="h-screen flex flex-col items-center cursor-pointer scroll-bar"  style={{backgroundColor:'#1F2937', overflowY: 'scroll'}}>
       <UserDetail>
         <UserIcon>
           <Image src={icon_user} />
@@ -188,6 +190,15 @@ const SideBar = () => {
           );
         })}
       </MenuItemsListContainer>
+      <section style={{padding: '12px', display: 'flex', alignItems: 'center' ,width: '100%', padding: '20px', backgroundColor: '#344054'}}>
+       <div style={{display: 'flex', alignItems: 'center', gap: 15,}}>
+       <LifeBuoy width='30px' height='30px' style={{ width: 25, height: 25 }} />
+       <span style={{color: '#969DA9'}}>Helpdesk</span>
+       </div>
+       <Arrow
+       
+       style={{marginLeft: 'auto', width: 25, height: 20}} />
+      </section>
     </div>
   );
 };

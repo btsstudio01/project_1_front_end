@@ -2,10 +2,11 @@ import styled from "styled-components";
 export const UserDetail = styled.div`
   width: 85%;
   height: 8%;
-  background-color: rgba(152, 162, 179, 0.3); /* Semi-transparent gray */
-  margin-top: 20px;
+  background-color: #374151 ; /* Semi-transparent gray */
+  margin-top: 25px;
+  margin-bottom: 28px;
   border-radius: 8px;
-
+  padding: 36px; 
   display: flex;
   position: relative;
   align-items: center;

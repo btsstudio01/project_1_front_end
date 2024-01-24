@@ -8,29 +8,44 @@ const columns = [
   {
     title: "Name",
     dataIndex: "name",
-    render: (text) => (
-      <Image
-        width={24}
-        preview={false}
-        style={{ borderRadius: "50px" }}
-        src={avatar}
-      />
-    ),
+    render: (text) => {
+      
+      return (
+      <div style={{display: 'flex', gap: 20}}>
+        <Image
+          width={24}
+          preview={false}
+          style={{ borderRadius: "50px" }}
+          src={avatar}
+        />
+        <span style={{fontSize: '14px', fontWeight: 600, color: 'black'}}>{text}</span>
+      </div>
+    )},
   },
   {
     title: "Email Address",
     dataIndex: "email",
+    render: (text, record) => (
+      <>
+       <span style={{color: '#475467', fontWeight:400}}>{text}</span>
+      </>
+    ),
   },
   {
     title: "Phone Number",
     dataIndex: "phone",
+    render: (text, record) => (
+      <>
+       <span style={{color: '#475467', fontWeight:400}}>{text}</span>
+      </>
+    )
   },
   {
     title: "Actions",
     dataIndex: "action",
     render: (text, record) => (
-      <div style={{ display: "flex", gap: "5px" }}>
-        <div>
+      <div style={{ display: "flex", gap: "12px", alignItems:'center' }}>
+        <div style={{border: '1px solid #6366F1', padding: '4px', borderRadius: '5px', display:'flex', justifyItems:'center', alignItems: 'center'}}>
           <Image preview={false} style={{ cursor: "pointer" }} src={eye} />
         </div>
         <div>
@@ -93,6 +108,7 @@ export default function Members() {
         }}
         columns={columns}
         dataSource={data}
+        pagination={false} 
       />
     </div>
   );
