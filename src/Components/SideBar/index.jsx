@@ -30,7 +30,7 @@ const MenuItems = [
 
 const SideBar = () => {
   return (
-    <div className=" h-screen w-1/6  bg-SideBar flex   justify-center">
+    <div className=" h-screen  bg-SideBar flex justify-center">
       <UserDetail>
         <UserIcon>
           <Image src={icon_user} />
@@ -42,7 +42,9 @@ const SideBar = () => {
         <SelectorIcon>
           <Image src={icon_selector} />
         </SelectorIcon>
-        <MenuItemsListContainer>{}</MenuItemsListContainer>
+        <MenuItemsListContainer>{
+
+        }</MenuItemsListContainer>
       </UserDetail>
     </div>
   );

@@ -3,9 +3,10 @@ import SideBar from "../../Components/SideBar";
 
 const Home = () => {
   return (
-    <div className="w-screen h-screen flex flex-row  ">
-      <SideBar />
-      <div className=" h-screen w-5/6 bg-yellow-500"></div>
+    <div className="h-screen w-full flex flex-row  ">
+      <div className="h-screen w-full bg-yellow-500">
+        
+      </div>
     </div>
   );
 };
