@@ -1,5 +1,6 @@
+import Home from "./Screens/Home";
 function App() {
-  return <h1>hello</h1>;
+  return <Home />;
 }
 
 export default App;
