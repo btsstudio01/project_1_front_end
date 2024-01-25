@@ -1,8 +1,8 @@
-.margin{
+.margin {
     margin-top: 25px;
 }
 
-.shadow{
+.shadow {
     box-shadow: #Eff0fe;
     height: 35px;
     width: 35px;
@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#Eff0fe !important ;
+    background-color: #Eff0fe !important;
 }
 
 :where(.css-dev-only-do-not-override-1qhpsh8).ant-modal .ant-modal-close {
@@ -18,7 +18,7 @@
     height: 45px !important;
     width: 45px !important;
     border-radius: 50% !important;
-    background-color:#Eff0fe !important ;
+    background-color: #Eff0fe !important;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     position: absolute;
     top: -3%;
@@ -28,11 +28,11 @@
 
 /* form */
 :where(.css-dev-only-do-not-override-1qhpsh8).ant-modal .ant-modal-content {
-  width: 710px !important;
+    width: 710px !important;
 }
 
-:where(.css-dev-only-do-not-override-1qhpsh8).ant-modal .ant-modal-footer >.ant-btn+.ant-btn {
-    margin-inline-start: 8px;
+:where(.css-dev-only-do-not-override-1qhpsh8).ant-modal .ant-modal-footer>.ant-btn+.ant-btn {
+    margin-inline-start: 8px !important;
     width: 114px !important;
     background-color: #6366f1 !important;
 }
@@ -42,7 +42,7 @@
     display: none !important;
 }
 
-.cameraBg{
+.cameraBg {
     position: absolute !important;
     top: 34% !important;
     border-radius: 50% !important;
