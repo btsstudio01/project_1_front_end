@@ -11,8 +11,9 @@ import {
   Address,
   SelectorIcon,
 } from "../../Uicomponents/SideBarStyles";
-import {ReactComponent as LifeBuoy} from '../../Assets/SiderBar/Menu/GreyIcons/lifebuoy.svg';
-import {ReactComponent as Arrow} from '../../Assets/SiderBar/Menu/GreyIcons/arrow.svg';
+import { ReactComponent as LifeBuoy } from "../../Assets/SiderBar/Menu/GreyIcons/lifebuoy.svg";
+import { ReactComponent as Arrow } from "../../Assets/SiderBar/Menu/GreyIcons/arrow.svg";
+import Drawer from "react-modern-drawer";
 
 import { useNavigate } from "react-router-dom";
 
@@ -142,7 +143,7 @@ const MenuItems = [
   },
 ];
 
-const SideBar = () => {
+const SideBar = ({ setIsSideBarOpened, isSideBarOpen }) => {
   const navigate = useNavigate();
   const [selectedItem, setSelected] = useState(0);
 
@@ -152,11 +153,21 @@ const SideBar = () => {
     navigate(item.link);
   };
 
+  const toggleDrawer = () => {
+    // setIsSideBarOpened(!isOpen);
+    // setIsOpen((prevState) => !prevState);
+
+    setIsSideBarOpened(!isSideBarOpen);
+  };
+
   return (
-    <div className="h-screen flex flex-col items-center cursor-pointer scroll-bar"  style={{backgroundColor:'#1F2937', overflowY: 'scroll'}}>
+    <div
+      className="h-screen flex flex-col items-center cursor-pointer scroll-bar"
+      style={{ backgroundColor: "#1F2937", overflowY: "scroll" }}
+    >
       <UserDetail>
         <UserIcon>
-          <Image src={icon_user} />
+          <Image preview={false} src={icon_user} />
         </UserIcon>
         <Details>
           <Name>Buzz Coworking</Name>
@@ -190,14 +201,25 @@ const SideBar = () => {
           );
         })}
       </MenuItemsListContainer>
-      <section style={{padding: '12px', display: 'flex', alignItems: 'center' ,width: '100%', padding: '20px', backgroundColor: '#344054'}}>
-       <div style={{display: 'flex', alignItems: 'center', gap: 15,}}>
-       <LifeBuoy width='30px' height='30px' style={{ width: 25, height: 25 }} />
-       <span style={{color: '#969DA9'}}>Helpdesk</span>
-       </div>
-       <Arrow
-       
-       style={{marginLeft: 'auto', width: 25, height: 20}} />
+      <section
+        style={{
+          padding: "12px",
+          display: "flex",
+          alignItems: "center",
+          width: "100%",
+          padding: "20px",
+          backgroundColor: "#344054",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: 15 }}>
+          <LifeBuoy
+            width="30px"
+            height="30px"
+            style={{ width: 25, height: 25 }}
+          />
+          <span style={{ color: "#969DA9" }}>Helpdesk</span>
+        </div>
+        <Arrow style={{ marginLeft: "auto", width: 25, height: 20 }} />
       </section>
     </div>
   );
