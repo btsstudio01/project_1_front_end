@@ -88,7 +88,7 @@ const TopHeader = ({ setData, data }) => {
                   </span>
                   <span className="w-1/2 pl-2">
                     Last Name :{" "}
-                    <Input value={formData.name} onChange={handleInputChange("name")} />
+                    <Input  />
                   </span>
                 </div>
                 <div className="flex">
@@ -116,26 +116,24 @@ const TopHeader = ({ setData, data }) => {
                 <div className="flex">
                   <span className="w-1/2 pr-2">
                     Business Name :{" "}
-                    <Input value={formData.name} onChange={handleInputChange("name")} />
+                    <Input   />
                   </span>
                   <span className="w-1/2 pl-2">
                     Business Email :{" "}
-                    <Input value={formData.name} onChange={handleInputChange("name")} />
+                    <Input   />
                   </span>
                 </div>
                 <div className="flex">
                   <span className="w-1/2 pr-2">
                     Business Phone :{" "}
                     <Input
-                      value={formData.email}
-                      onChange={handleInputChange("email")}
+                     
                     />
                   </span>
                   <span className="w-1/2 pl-2">
                     Notes:{" "}
                     <Input
-                      value={formData.phone}
-                      onChange={handleInputChange("phone")}
+                      
                     />
                   </span>
                 </div>

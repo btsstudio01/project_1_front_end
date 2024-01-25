@@ -43,8 +43,8 @@
 }
 
 .cameraBg{
-    position: absolute;
-    top: 34%;
-    border-radius: 50%;
-    left: 4%;
+    position: absolute !important;
+    top: 34% !important;
+    border-radius: 50% !important;
+    left: 4% !important;
 }
