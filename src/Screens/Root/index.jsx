@@ -45,7 +45,6 @@ export default function Root() {
             />
           </div>
           <div style={{ paddingLeft: "30px", paddingRight: "30px" }}>
-            <SecondHeader ToggleDrawer={ToggleDrawer} />
             <Outlet />
             <Pagination />
           </div>
