@@ -1,0 +1,50 @@
+.margin{
+    margin-top: 25px;
+}
+
+.shadow{
+    box-shadow: #Eff0fe;
+    height: 35px;
+    width: 35px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#Eff0fe !important ;
+}
+
+:where(.css-dev-only-do-not-override-1qhpsh8).ant-modal .ant-modal-close {
+    box-shadow: #Eff0fe !important;
+    height: 45px !important;
+    width: 45px !important;
+    border-radius: 50% !important;
+    background-color:#Eff0fe !important ;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: absolute;
+    top: -3%;
+    left: 95%;
+}
+
+
+/* form */
+:where(.css-dev-only-do-not-override-1qhpsh8).ant-modal .ant-modal-content {
+  width: 710px !important;
+}
+
+:where(.css-dev-only-do-not-override-1qhpsh8).ant-modal .ant-modal-footer >.ant-btn+.ant-btn {
+    margin-inline-start: 8px;
+    width: 114px !important;
+    background-color: #6366f1 !important;
+}
+
+.ant-modal-body .ant-btn-default {
+    background-color: white !important;
+    display: none !important;
+}
+
+.cameraBg{
+    position: absolute;
+    top: 34%;
+    border-radius: 50%;
+    left: 4%;
+}

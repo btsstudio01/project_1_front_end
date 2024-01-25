@@ -1,6 +1,11 @@
 import { ReactComponent as Plus } from "../../Assets/Members/plus.svg";
 import { ReactComponent as Search } from "../../Assets/Members/search.svg";
 import { notification } from "antd";
+import './index.css'
+
+import UserPlus from './images/user-plus-01.svg'
+import AvatarImg from './images/Avatar.png'
+import CameraImg from './images/camera-plus.svg'
 
 import { Input, Modal, Button } from "antd";
 
@@ -49,37 +54,53 @@ const TopHeader = ({ setData, data }) => {
   return (
     <>
       <Modal
-        title="Add Member"
+        // title="Add Member"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
+        cancelButtonProps={{ hidden: true }}
+        okText={"Save"}
       >
+        <div className="flex gap-4 items-center">
+          <div className="shadow">
+            <img src={UserPlus} alt="" />
+          </div>
+          <h3 className="font-bold">Add Member</h3>
+        </div>
 
-        <div className="border-t border-gray-400 pl-4 w-70 pt-4">
+        <div >
+          <img className="absolute top-28 left-4" src={AvatarImg} alt="" />
+          <div className="shadow cameraBg">
+            <img src={CameraImg} alt="" />
+          </div>
 
-          <div className="border-l border-gray-400 pl-4 pt-4">
+        </div>
+
+        <div className="border-t border-gray-300 pl-4 w-70 pt-3 margin">
+          <div className="border-l border-gray-300 pl-4 pt-0 mt-4 ml-12">
             <div>
               <h2 className="font-bold">Personal</h2>
-              <div className="flex flex-col">
-                <div className="flex gap-6">
-                  <span>
+              <div className="flex flex-col gap-1">
+                <div className="flex">
+                  <span className="w-1/2 pr-2">
                     First Name :{" "}
                     <Input value={formData.name} onChange={handleInputChange("name")} />
                   </span>
-                  <span>
+                  <span className="w-1/2 pl-2">
                     Last Name :{" "}
                     <Input value={formData.name} onChange={handleInputChange("name")} />
                   </span>
                 </div>
-                <div className="flex gap-6">
-                  <span>
+                <div className="flex">
+                  <span className="w-1/2 pr-2">
                     Email :{" "}
                     <Input
+                      // width={100}
                       value={formData.email}
                       onChange={handleInputChange("email")}
                     />
                   </span>
-                  <span>
+                  <span className="w-1/2 pl-2">
                     Phone :{" "}
                     <Input
                       value={formData.phone}
@@ -91,26 +112,26 @@ const TopHeader = ({ setData, data }) => {
             </div>
             <div>
               <h2 className="font-bold mt-6">Business</h2>
-              <div className="flex flex-col gap-6">
-                <div className="flex gap-6">
-                  <span>
+              <div className="flex flex-col gap-1">
+                <div className="flex">
+                  <span className="w-1/2 pr-2">
                     Business Name :{" "}
                     <Input value={formData.name} onChange={handleInputChange("name")} />
                   </span>
-                  <span>
+                  <span className="w-1/2 pl-2">
                     Business Email :{" "}
                     <Input value={formData.name} onChange={handleInputChange("name")} />
                   </span>
                 </div>
-                <div className="flex gap-6">
-                  <span>
+                <div className="flex">
+                  <span className="w-1/2 pr-2">
                     Business Phone :{" "}
                     <Input
                       value={formData.email}
                       onChange={handleInputChange("email")}
                     />
                   </span>
-                  <span>
+                  <span className="w-1/2 pl-2">
                     Notes:{" "}
                     <Input
                       value={formData.phone}
