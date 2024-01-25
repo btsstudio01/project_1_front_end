@@ -16,7 +16,7 @@ export default function Root() {
           <SideBar />
           {/* {show && <SideBar />} */}
         </div>
-        <div id="detail" className="w-3/4" style={{ backgroundColor: 'F9FAFB' }}>
+        <div id="detail" className="w-full md:w-3/4" style={{ backgroundColor: 'F9FAFB' }}>
           <div>
             <NavBar showValue={show} openSideBar={setShow} />
           </div>
