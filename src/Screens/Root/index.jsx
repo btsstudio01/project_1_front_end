@@ -1,4 +1,6 @@
 import { Outlet } from "react-router-dom";
+import { ReactComponent as LifeBuoy } from '../../Assets/SiderBar/Menu/GreyIcons/lifebuoy.svg'
+import { ReactComponent as Arrow } from '../../Assets/SiderBar/Menu/GreyIcons/arrow.svg'
 import SideBar from "../../Components/SideBar";
 // import TopHeader from "../../Components/TopHeader";
 import SecondHeader from "../../Components/SecondHeader";
@@ -20,7 +22,7 @@ export default function Root() {
       <div className={"flex w-full"}>
         <div
           id="sidebar"
-          className=" sm:w-1/2 lg:w-1/4   sm:block "
+          className=" sm:w-1/2 lg:w-1/4 sm:block "
           style={{
             width: isSideBarOpen ? "300px" : "0",
             transition: "all .3s",
@@ -30,6 +32,26 @@ export default function Root() {
             setIsSideBarOpened={setIsSideBarOpened}
             isSideBarOpen={isSideBarOpen}
           />
+          <section
+            style={{
+              padding: "12px",
+              display: "flex",
+              alignItems: "center",
+              width: "100%",
+              padding: "20px",
+              backgroundColor: "#344054",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: 15 }}>
+              <LifeBuoy
+                width="30px"
+                height="30px"
+                style={{ width: 25, height: 25 }}
+              />
+              <span style={{ color: "#969DA9" }}>Helpdesk</span>
+            </div>
+            <Arrow style={{ marginLeft: "auto", width: 25, height: 20 }} />
+          </section>
           {/* {show && <SideBar />} */}
         </div>
         <div
@@ -44,12 +66,13 @@ export default function Root() {
               ToggleDrawer={ToggleDrawer}
             />
           </div>
-          <div style={{ paddingLeft: "30px", paddingRight: "30px" }}>
+          {/* <div style={{ paddingLeft: "30px", paddingRight: "30px" }}>
             <SecondHeader ToggleDrawer={ToggleDrawer} />
             <Outlet />
             <Pagination />
-          </div>
+          </div> */}
         </div>
+
       </div>
     </>
   );

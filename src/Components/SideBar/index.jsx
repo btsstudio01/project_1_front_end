@@ -35,10 +35,13 @@ const MenuItemsListContainer = styled.div`
 `;
 
 const ItemSelection = styled.div`
-  width: 85%;
+  width: 30%;
   display: flex;
   color: ${(props) =>
     props?.Itemid === props?.selectedItem ? "white" : "grey"};
+    @media (min-width: 640px) {
+    width: 85%;
+   }
 
   font-family: Inter;
   font-size: 1rem;
@@ -162,7 +165,7 @@ const SideBar = ({ setIsSideBarOpened, isSideBarOpen }) => {
 
   return (
     <div
-      className="h-screen flex flex-col items-center cursor-pointer scroll-bar"
+      className="h-screen  flex flex-col items-center cursor-pointer scroll-bar"
       style={{ backgroundColor: "#1F2937", overflowY: "scroll" }}
     >
       <UserDetail>
@@ -170,11 +173,11 @@ const SideBar = ({ setIsSideBarOpened, isSideBarOpen }) => {
           <Image preview={false} src={icon_user} />
         </UserIcon>
         <Details>
-          <Name>Buzz Coworking</Name>
-          <Address>123 Main Street</Address>
+          <Name className="hidden lg:block">Buzz Coworking</Name>
+          <Address className="text-sm hidden md:block">123 Main Street</Address>
         </Details>
-        <SelectorIcon>
-          <Image src={icon_selector} />
+        <SelectorIcon className="hidden md:block">
+          <Image src={icon_selector} preview={false} />
         </SelectorIcon>
       </UserDetail>
       <MenuItemsListContainer>
@@ -196,12 +199,14 @@ const SideBar = ({ setIsSideBarOpened, isSideBarOpen }) => {
                 <path d={items.path} />
                 <path d={items?.path2} />
               </StyledSVG>
-              {items.title}
+              <div className="hidden sm:block">
+                {items.title}
+              </div>
             </ItemSelection>
           );
         })}
       </MenuItemsListContainer>
-      <section
+      {/* <section
         style={{
           padding: "12px",
           display: "flex",
@@ -220,7 +225,7 @@ const SideBar = ({ setIsSideBarOpened, isSideBarOpen }) => {
           <span style={{ color: "#969DA9" }}>Helpdesk</span>
         </div>
         <Arrow style={{ marginLeft: "auto", width: 25, height: 20 }} />
-      </section>
+      </section> */}
     </div>
   );
 };

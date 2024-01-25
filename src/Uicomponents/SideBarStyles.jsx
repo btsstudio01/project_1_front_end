@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const UserDetail = styled.div`
-  width: 85%;
+  width: 30%;
   height: 8%;
   background-color: #374151 ; /* Semi-transparent gray */
   margin-top: 25px;
@@ -11,6 +11,9 @@ export const UserDetail = styled.div`
   position: relative;
   align-items: center;
   justify-content: center;
+  @media (min-width: 640px) {
+    width: 85%;
+  }
 `;
 export const UserIcon = styled.div`
   position: absolute;
