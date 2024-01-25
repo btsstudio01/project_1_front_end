@@ -35,11 +35,11 @@ const MenuItemsListContainer = styled.div`
 `;
 
 const ItemSelection = styled.div`
-  width: 30%;
+  
   display: flex;
   color: ${(props) =>
     props?.Itemid === props?.selectedItem ? "white" : "grey"};
-    @media (min-width: 640px) {
+    @media (min-width: 768px) {
     width: 85%;
    }
 
@@ -165,7 +165,7 @@ const SideBar = ({ setIsSideBarOpened, isSideBarOpen }) => {
 
   return (
     <div
-      className="h-screen  flex flex-col items-center cursor-pointer scroll-bar"
+      className="h-screen w-[6rem] sm:w-5/6 sm:p-8 md:p-0 flex flex-col items-center cursor-pointer scroll-bar"
       style={{ backgroundColor: "#1F2937", overflowY: "scroll" }}
     >
       <UserDetail>
@@ -173,10 +173,10 @@ const SideBar = ({ setIsSideBarOpened, isSideBarOpen }) => {
           <Image preview={false} src={icon_user} />
         </UserIcon>
         <Details>
-          <Name className="hidden lg:block">Buzz Coworking</Name>
-          <Address className="text-sm hidden md:block">123 Main Street</Address>
+          <Name className="hidden sm:flex">Buzz Coworking</Name>
+          <Address className="text-sm hidden md:flex">123 Main Street</Address>
         </Details>
-        <SelectorIcon className="hidden md:block">
+        <SelectorIcon className="hidden sm:block">
           <Image src={icon_selector} preview={false} />
         </SelectorIcon>
       </UserDetail>

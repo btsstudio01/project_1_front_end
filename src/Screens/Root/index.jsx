@@ -37,10 +37,12 @@ export default function Root() {
               padding: "12px",
               display: "flex",
               alignItems: "center",
-              width: "100%",
+              // width: "100%",
               padding: "20px",
               backgroundColor: "#344054",
+             
             }}
+            className="w-[6rem] sm:w-5/6"
           >
             <div style={{ display: "flex", alignItems: "center", gap: 15 }}>
               <LifeBuoy
@@ -66,11 +68,11 @@ export default function Root() {
               ToggleDrawer={ToggleDrawer}
             />
           </div>
-          {/* <div style={{ paddingLeft: "30px", paddingRight: "30px" }}>
+          <div style={{ paddingLeft: "30px", paddingRight: "30px" }}>
             <SecondHeader ToggleDrawer={ToggleDrawer} />
             <Outlet />
             <Pagination />
-          </div> */}
+          </div>
         </div>
 
       </div>

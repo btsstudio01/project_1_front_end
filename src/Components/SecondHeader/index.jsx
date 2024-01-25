@@ -49,37 +49,87 @@ const TopHeader = ({ setData, data }) => {
   return (
     <>
       <Modal
-        title="Basic Modal"
+        title="Add Member"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        <div>
-          <span>
-            Name :{" "}
-            <Input value={formData.name} onChange={handleInputChange("name")} />
-          </span>
-          <span>
-            Email :{" "}
-            <Input
-              value={formData.email}
-              onChange={handleInputChange("email")}
-            />
-          </span>
-          <span>
-            Phone :{" "}
-            <Input
-              value={formData.phone}
-              onChange={handleInputChange("phone")}
-            />
-          </span>
-          <Button
-            style={{ marginTop: "5px", backgroundColor: "white" }}
-            onClick={handleSubmit}
-          >
-            Submit
-          </Button>
+
+        <div className="border-t border-gray-400 pl-4 w-70 pt-4">
+
+          <div className="border-l border-gray-400 pl-4 pt-4">
+            <div>
+              <h2 className="font-bold">Personal</h2>
+              <div className="flex flex-col">
+                <div className="flex gap-6">
+                  <span>
+                    First Name :{" "}
+                    <Input value={formData.name} onChange={handleInputChange("name")} />
+                  </span>
+                  <span>
+                    Last Name :{" "}
+                    <Input value={formData.name} onChange={handleInputChange("name")} />
+                  </span>
+                </div>
+                <div className="flex gap-6">
+                  <span>
+                    Email :{" "}
+                    <Input
+                      value={formData.email}
+                      onChange={handleInputChange("email")}
+                    />
+                  </span>
+                  <span>
+                    Phone :{" "}
+                    <Input
+                      value={formData.phone}
+                      onChange={handleInputChange("phone")}
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h2 className="font-bold mt-6">Business</h2>
+              <div className="flex flex-col gap-6">
+                <div className="flex gap-6">
+                  <span>
+                    Business Name :{" "}
+                    <Input value={formData.name} onChange={handleInputChange("name")} />
+                  </span>
+                  <span>
+                    Business Email :{" "}
+                    <Input value={formData.name} onChange={handleInputChange("name")} />
+                  </span>
+                </div>
+                <div className="flex gap-6">
+                  <span>
+                    Business Phone :{" "}
+                    <Input
+                      value={formData.email}
+                      onChange={handleInputChange("email")}
+                    />
+                  </span>
+                  <span>
+                    Notes:{" "}
+                    <Input
+                      value={formData.phone}
+                      onChange={handleInputChange("phone")}
+                    />
+                  </span>
+                </div>
+              </div>
+              <Button
+                style={{ marginTop: "13px", backgroundColor: "#4CAF50", position: "absolute" }}
+                onClick={handleSubmit}
+              >
+                Save
+              </Button>
+
+            </div>
+          </div>
         </div>
+
       </Modal>
       <div
         style={{
