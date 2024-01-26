@@ -50,7 +50,7 @@ export default function Root() {
           <div style={{ paddingLeft: "30px", paddingRight: "30px" }}>
             {/* <SecondHeader ToggleDrawer={ToggleDrawer} /> */}
             <Outlet />
-            <Pagination />
+            {/* <Pagination /> */}
           </div>
         </div>
 

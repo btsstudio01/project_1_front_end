@@ -181,8 +181,8 @@ const SideBar = ({ setIsSideBarOpened, isSideBarOpen }) => {
           <Image preview={false} src={icon_user} />
         </UserIcon>
         <Details>
-          <Name className="hidden sm:flex">Buzz Coworking</Name>
-          <Address className="text-sm hidden md:flex">123 Main Street</Address>
+          <Name className="hidden sm:flex sm:ml-1 sm:mr-1">Buzz Coworking</Name>
+          <Address className="text-sm hidden md:flex sm:ml-1 sm:mr-1">123 Main Street</Address>
         </Details>
         <SelectorIcon className="hidden sm:block">
           <Image src={icon_selector} preview={false} />
