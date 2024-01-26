@@ -31,7 +31,6 @@ const MenuItemsListContainer = styled.div`
 
   align-items: center;
 
-  padding-top: 10px;
 `;
 
 const ItemSelection = styled.div`
@@ -47,13 +46,17 @@ const ItemSelection = styled.div`
   font-size: 1rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 12px;
   border-radius: 12px;
 
-  padding: 12px 16px;
+  padding: 6px 4px;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 10px;
+  gap: 8px;
+  margin-bottom: 3px;
+
+  @media (max-width: 425px) {
+    padding: 3px 6px;
+   }
 
   background-color: ${(props) =>
     props?.Itemid === props?.selectedItem ? "#6366f1" : null};
@@ -75,6 +78,9 @@ const StyledSVG = styled.svg`
 
   transition: stroke 0.3s ease;
 
+  @media (max-width: 426px) {
+    padding: 3px;
+   }
   &:hover {
     stroke: white;
   }
@@ -165,8 +171,10 @@ const SideBar = ({ setIsSideBarOpened, isSideBarOpen }) => {
 
   return (
     <div
-      className="h-screen w-[6rem] sm:w-5/6 sm:p-8 md:p-0 flex flex-col items-center cursor-pointer scroll-bar"
-      style={{ backgroundColor: "#1F2937", overflowY: "scroll" }}
+      className="h-[100vh] w-[6rem] sm:w-5/6 sm:p-8 md:p-0 flex flex-col items-center cursor-pointer scroll-bar"
+      style={{
+        backgroundColor: "#1F2937", overflowY: "scroll", position: "relative", fontSize: "16px",
+      }}
     >
       <UserDetail>
         <UserIcon>
@@ -206,26 +214,30 @@ const SideBar = ({ setIsSideBarOpened, isSideBarOpen }) => {
           );
         })}
       </MenuItemsListContainer>
-      {/* <section
+      <section
         style={{
-          padding: "12px",
+          position: "absolute",
           display: "flex",
           alignItems: "center",
           width: "100%",
-          padding: "20px",
+          padding: "12px 18px",
           backgroundColor: "#344054",
+          bottom: "0px",
+          fontSize: "14px",
+          justifyContent: "center"
         }}
+        className="w-[6rem] sm:w-5/6"
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 15 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 15, position: "relative" }}>
           <LifeBuoy
             width="30px"
             height="30px"
             style={{ width: 25, height: 25 }}
           />
-          <span style={{ color: "#969DA9" }}>Helpdesk</span>
+          <span className="hidden sm:block" style={{ color: "#969DA9" }}>Helpdesk</span>
         </div>
-        <Arrow style={{ marginLeft: "auto", width: 25, height: 20 }} />
-      </section> */}
+        <Arrow className="hidden sm:block" style={{ marginLeft: "auto", width: 25, height: 20 }} />
+      </section>
     </div>
   );
 };

@@ -32,28 +32,7 @@ export default function Root() {
             setIsSideBarOpened={setIsSideBarOpened}
             isSideBarOpen={isSideBarOpen}
           />
-          <section
-            style={{
-              padding: "12px",
-              display: "flex",
-              alignItems: "center",
-              // width: "100%",
-              padding: "20px",
-              backgroundColor: "#344054",
-             
-            }}
-            className="w-[6rem] sm:w-5/6"
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: 15 }}>
-              <LifeBuoy
-                width="30px"
-                height="30px"
-                style={{ width: 25, height: 25 }}
-              />
-              <span style={{ color: "#969DA9" }}>Helpdesk</span>
-            </div>
-            <Arrow style={{ marginLeft: "auto", width: 25, height: 20 }} />
-          </section>
+          
           {/* {show && <SideBar />} */}
         </div>
         <div

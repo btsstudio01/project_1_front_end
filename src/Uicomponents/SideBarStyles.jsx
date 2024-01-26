@@ -10,6 +10,12 @@ export const UserDetail = styled.div`
   position: relative;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 426px) {
+    padding: 22px;
+   }
+
+  
   
  
 `;
